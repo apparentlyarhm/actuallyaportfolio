@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     title: "Personal website",
     projectDesc: [
-      "A TypeScript and Next.js based portfolio site styled with NextUI, created during a work stint in Chennai as an exploration into the modern React ecosystem. I ended up adding a LOT more stuff and thats just for fun. I highly recommend checking it out!"
+      "A TypeScript and Next.js based NOT A portfolio site styled with NextUI, created during a work stint in Chennai as an exploration into the modern React ecosystem. I ended up adding a LOT more stuff and thats just for fun. I highly recommend checking it out!"
     ],
     projectLink: "https://github.com/apparentlyarhm/notaportfolio",
     images: [ts.src, njs.src],

@@ -16,7 +16,7 @@ export const education: educationItem[] = [
     },
     {
         graduatedIn: "Batch of 2020",
-        school: "Delhi Public School, Vidyut Nagar, Dadri",
+        school: "Delhi Public School",
         title: "Senior Secondary School, DPS (12th Grade)",
         body: "Aggregate of 91% in AISSCE 2020",
         location: "Vidyut Nagar, Dadri"

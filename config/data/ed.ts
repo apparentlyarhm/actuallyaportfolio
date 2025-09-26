@@ -27,7 +27,7 @@ export const education: educationItem[] = [
         school: "S.R.M Institute of Science and Technology",
         title: "Bachelor's of Technology, SRMIST",
         body: "Computer Science and Engineering; 8.46 CGPA",
-        location: ", kattankulathur, Chennai Tamil Nadu"
+        location: "Kattankulathur, Chennai Tamil Nadu"
 
     },
 ]

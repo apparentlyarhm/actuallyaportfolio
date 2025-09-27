@@ -44,7 +44,7 @@ export default function ProjectPopover({ project }: ProjectPopoverProps) {
         -{project.status}-
       </p>
 
-      <h3 className={clsx("text-base font-semibold text-gray-900", bitter.className)}>
+      <h3 className={clsx("text-small font-semibold text-gray-900", bitter.className)}>
         {project.title}
       </h3>
 

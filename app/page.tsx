@@ -36,9 +36,13 @@ export default function Home() {
 
           <Button
             variant="bordered"
-            endContent={<ExternalLink size={16} />}
-            className={clsx("py-10 max-w-[200px] text-medium text-gray-800 font-black border-1 hover:border-blue-100 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
-            radius="full"
+            as={"a"}
+            href="https://arhm.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            endContent={<ArrowUpRight size={20} />}
+            className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-100 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+            radius={"lg"}
           >
             {"ARHM.DEV"}
           </Button>
@@ -59,10 +63,10 @@ export default function Home() {
 
                 <div className="flex items-center gap-1">
                   <a
-                    href={item.href}
+                    href={item.href as string}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200 flex items-center gap-1"
+                    className="text-sm font-medium text-gray-800 hover:text-blue-600 flex items-center gap-1"
                   >
                     <span>{item.orgName}</span>
                     <ExternalLink
@@ -95,26 +99,18 @@ export default function Home() {
                 <Popover
                   showArrow
                   backdrop="opaque"
+                  offset={5}
                   placement="top-start"
-                  classNames={{
-                    base: ["before:bg-default-200"],
-                    content: [
-                      "py-3 px-4 border border-default-200",
-                      "bg-linear-to-br from-white to-default-300",
-                      "dark:from-default-100 dark:to-default-50",
-                    ],
-                  }}
                 >
                   <PopoverTrigger>
-                    <div className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
+                    <div id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
                       <span className="truncate">{item.title}</span>
                       <ArrowUpRight size={20} className="flex-shrink-0" />
                     </div>
                   </PopoverTrigger>
 
-                  <PopoverContent>
-                    <ProjectPopover project={item} />
-                  </PopoverContent>
+                  <PopoverContent id="po-content-parent" children={<ProjectPopover project={item} />} className="p-0" />
+                  {/* the p-0 above is added as an override for internal implementation of the popovercontent. */}
                 </Popover>
 
                 <p className="text-sm text-gray-700">

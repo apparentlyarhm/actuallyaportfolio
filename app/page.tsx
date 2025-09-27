@@ -4,9 +4,10 @@ import { projects } from "@/config/data/projects";
 import { career } from "@/config/data/work";
 import { bitter, nunito } from "@/config/fonts";
 import clsx from "clsx";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ExternalLink } from "lucide-react";
 import { education } from "@/config/data/ed";
 import { Button } from "@heroui/button";
+import { links } from "@/config/data/socials";
 
 export default function Home() {
   return (
@@ -40,13 +41,25 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowUpRight size={20} />}
-            className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-100 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+            className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
             radius={"lg"}
           >
             {"ARHM.DEV"}
           </Button>
-        </div>
 
+          <Button
+            variant="bordered"
+            as={"a"}
+            href="https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            endContent={<ArrowDown size={20} />}
+            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-green-400 hover:text-green-600 hover:bg-green-100", nunito.className)}
+            radius={"lg"}
+          >
+            {"Get the resume"}
+          </Button>
+        </div>
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
@@ -150,6 +163,27 @@ export default function Home() {
 
         <div className="flex flex-col gap-2 rounded-3xl">
           <p className="font-extrabold tracking-wide text-4xl">Contact / Socials / Links</p>
+
+          <br />
+
+          <div className="flex flex-row gap-2 text-justify">
+            {links.map((item) => (
+              <Button
+                isIconOnly
+                key={item.title}
+                variant="bordered"
+                as={"a"}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                startContent={<item.icon />}
+                className={clsx("py-5 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+                radius={"lg"}
+              >
+              </Button>
+            ))}
+          </div>
+
         </div>
 
       </div>

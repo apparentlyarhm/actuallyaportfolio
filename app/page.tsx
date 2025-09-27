@@ -1,4 +1,3 @@
-
 import ProjectPopover from "@/components/project/pop-over";
 import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { projects } from "@/config/data/projects";

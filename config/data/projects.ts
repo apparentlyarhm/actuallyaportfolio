@@ -16,7 +16,7 @@ export interface Project {
   projectDesc: string[];
   projectLink: string;
   images: string[];
-  category: string;
+  category: string; // bro i dont even remember adding this field what do i even use it for
   status: "live" | "partially-live" | "unreleased" | "deprecated";
 }
 
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     title: "Spring based whitelisting tool for firewalls on Google Cloud Platform",
     projectDesc: [
-      "A Spring Boot and Next.js based IP whitelisting platform for managing GCP Firewall rules, deployed via Cloud Run with CI/CD using PowerShell and Artifact Registry."
+      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads. deployed via Cloud Run with CI/CD using PowerShell and Artifact Registry. Too early stage to have a Github actions pipeline though"
     ],
     projectLink: "https://apparentlyarhm.github.io/minecraft-vm-management-console/",
     images: [sprng.src, njs.src, gcp.src],
@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     title: "Fully Randomized Examination system using Django",
     projectDesc: [
-      "A Django-based examination engine utilizing a centralized database and constraint-based logic to dynamically generate randomized question sets with difficulty levels."
+      "A Django-based examination engine utilizing a centralized database and constraint-based logic to dynamically generate randomized question sets with difficulty levels. Not my proudest work honestly"
     ],
     projectLink: "https://github.com/apparentlyarhm/randomexamapp",
     images: [django.src, gcp.src, js.src, mysql.src, py.src],

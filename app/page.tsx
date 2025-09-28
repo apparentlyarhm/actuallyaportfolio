@@ -1,15 +1,42 @@
-import ProjectPopover from "@/components/project/pop-over";
-import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { projects } from "@/config/data/projects";
 import { career } from "@/config/data/work";
-import { bitter, nunito } from "@/config/fonts";
+import { bitter, jbMono, nunito } from "@/config/fonts";
 import clsx from "clsx";
 import { ArrowDown, ArrowUpRight, ExternalLink } from "lucide-react";
 import { education } from "@/config/data/ed";
 import { Button } from "@heroui/button";
 import { links } from "@/config/data/socials";
 
+const statusColors: Record<
+  string,
+  { bg: string; text: string; border: string }
+> = {
+  live: {
+    bg: "bg-green-50",
+    text: "text-green-700",
+    border: "border-green-200",
+  },
+  "partially-live": {
+    bg: "bg-yellow-50",
+    text: "text-yellow-700",
+    border: "border-yellow-200",
+  },
+  unreleased: {
+    bg: "bg-gray-100",
+    text: "text-gray-700",
+    border: "border-gray-200",
+  },
+  deprecated: {
+    bg: "bg-red-50",
+    text: "text-red-700",
+    border: "border-red-200",
+  },
+};
+
 export default function Home() {
+  const getStatusColors = (status: string) =>
+    statusColors[status] || statusColors["unreleased"];
+
   return (
     <section className="flex flex-col items-start sm:items-center justify-center gap-4 py-8 md:py-10">
       <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ", bitter.className)}>
@@ -105,37 +132,47 @@ export default function Home() {
         <div className="flex flex-col gap-3 rounded-4xl">
           <p className="font-extrabold tracking-wide text-4xl">Projects</p>
           <div className="flex flex-col gap-7 text-justify">
-            {projects.map((item) => (
-              <div key={item.title} className="flex flex-col">
+            {projects.map((item) => {
+              const colors = getStatusColors(item.status);
 
-                <Popover
-                  showArrow
-                  backdrop="opaque"
-                  offset={5}
-                  placement="top-start"
-                >
-                  <PopoverTrigger>
-                    <div id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
-                      <span className="truncate">{item.title}</span>
-                      <ArrowUpRight size={20} className="flex-shrink-0" />
+              return (
+                <div key={item.title} className="flex flex-col">
+
+                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
+                    <span className="truncate">{item.title}</span>
+                    <ArrowUpRight size={20} className="flex-shrink-0" />
+                  </a>
+
+                  <p className="text-sm text-gray-700">
+                    {item.projectDesc.join(" ")}
+                  </p>
+
+
+                  <div className="flex flex-row gap-1 mt-2">
+                    <p
+                      className={clsx(
+                        "text-xs px-3 py-1 border rounded-3xl font-medium",
+                        colors.bg,
+                        colors.text,
+                        colors.border,
+                        jbMono.className
+                      )}
+                    >
+                      {item.status.toUpperCase()}
+                    </p>
+
+                    <p>{"::"}</p>
+
+                    <div className="flex flex-row gap-2 p-1">
+                      {item.images.map((img) => (
+                        <img key={img} height={20} width={20} src={img} />
+                      ))}
                     </div>
-                  </PopoverTrigger>
-
-                  <PopoverContent id="po-content-parent" children={<ProjectPopover project={item} />} className="p-0" />
-                  {/* the p-0 above is added as an override for internal implementation of the popovercontent. */}
-                </Popover>
-
-                <p className="text-sm text-gray-700">
-                  {item.projectDesc.join(" ")}
-                </p>
-
-                <div className="flex flex-row gap-2 p-1">
-                  {item.images.map((img) => (<img key={img} height={20} width={20} src={img}></img>
-                  )
-                  )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            }
+            )}
           </div>
         </div>
 

@@ -37,14 +37,14 @@ export default function Home() {
           <Button
             variant="bordered"
             as={"a"}
-            href="https://arhm.dev"
+            href="https://nfsw.arhm.dev"
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowUpRight size={20} />}
             className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
             radius={"lg"}
           >
-            {"ARHM.DEV"}
+            {"nsfw.arhm.dev"}
           </Button>
 
           <Button

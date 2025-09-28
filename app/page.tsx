@@ -37,7 +37,7 @@ export default function Home() {
           <Button
             variant="bordered"
             as={"a"}
-            href="https://nfsw.arhm.dev"
+            href="https://nsfw.arhm.dev"
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowUpRight size={20} />}

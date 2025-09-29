@@ -24,9 +24,9 @@ export const projects: Project[] = [
   {
     title: "Spring based whitelisting tool for firewalls on Google Cloud Platform",
     projectDesc: [
-      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads. deployed via Cloud Run with CI/CD using PowerShell and Artifact Registry. Too early stage to have a Github actions pipeline though"
+      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads. deployed via Cloud Run with CI/CD using PowerShell and Artifact Registry. Too early stage to have a Github actions pipeline though. Goal is to eliminate GCP console after setting up the server once (preferablly through IoC soon)"
     ],
-    projectLink: "https://apparentlyarhm.github.io/minecraft-vm-management-console/",
+    projectLink: "https://mccon.arhm.dev",
     images: [sprng.src, njs.src, gcp.src],
     category: "Personal",
     status: "partially-live"
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     title: "Spoti-proxy",
     projectDesc: [
-      "An Go proxy for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express)",
+      "An Go proxy for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev",
     ],
     projectLink: "https://github.com/apparentlyarhm/app-proxy-go/",
     images: [go.src, ps.src, gcp.src],
@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     title: "Personal website",
     projectDesc: [
-      "A TypeScript and Next.js based NOT A portfolio site styled with NextUI, created during a work stint in Chennai as an exploration into the modern React ecosystem. I ended up adding a LOT more stuff and thats just for fun. I highly recommend checking it out!"
+      "Not a portfolio by the way, and expect more random stuff on this site. (nsfw.arhm.dev)"
     ],
     projectLink: "https://github.com/apparentlyarhm/notaportfolio",
     images: [ts.src, njs.src],
@@ -54,17 +54,17 @@ export const projects: Project[] = [
   {
     title: "Infra Code for Minecraft Server- GCP",
     projectDesc: [
-      "A Terraform-based infrastructure stack for provisioning Minecraft servers on GCP, intended as an easy entry point for hosting game servers in the cloud."
+      "Redoing all infra stuff for a minecraft server over and over is incredibly boring, so we automate everything from the infra itself to all the software setup and even mod loaders soon"
     ],
     projectLink: "https://github.com/apparentlyarhm/minecraft-terraform",
-    images: [tf.src, linux.src],
+    images: [tf.src, linux.src, gcp.src],
     category: "Personal",
     status: "unreleased"
   },
   {
     title: "Fully Randomized Examination system using Django",
     projectDesc: [
-      "A Django-based examination engine utilizing a centralized database and constraint-based logic to dynamically generate randomized question sets with difficulty levels. Not my proudest work honestly"
+      "Don't bother - this was the first thing I actually `built` and `deployed` (on GCP) - but it was more of a POC"
     ],
     projectLink: "https://github.com/apparentlyarhm/randomexamapp",
     images: [django.src, gcp.src, js.src, mysql.src, py.src],

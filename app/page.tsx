@@ -50,6 +50,7 @@ export default function Home() {
             {"`Portfolio`- /pɔːtˈfəʊliəʊ/."}
           </p>
           <p className="italic text-sm"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
+          <hr className="text-gray-400 mt-5" />
 
           <br />
 

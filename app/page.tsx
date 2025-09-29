@@ -52,7 +52,6 @@ export default function Home() {
           <p className="italic text-sm bdy"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
 
           <hr className="bdy mt-5" />
-
           <br />
 
           <p className="bdy">

@@ -42,22 +42,24 @@ export default function Home() {
       <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ", bitter.className)}>
 
         <img src="/cat.png" height={50} width={91} className="rounded-3xl"></img>
-        <p className={clsx("text-xl")}>Arhum's Portfolio.</p>
+        <p className={clsx("text-xl sbt-dark")}>Arhum's Portfolio.</p>
 
         <div className="flex flex-col gap-2 rounded-3xl text-justify">
-          <p className="font-extrabold tracking-wide text-4xl">Philosophy</p>
-          <p className="text-base text-gray-700">
+          <p className="font-extrabold tracking-wide text-4xl hdn-dark">Philosophy</p>
+          <p className="text-base sbt-dark">
             {"`Portfolio`- /pɔːtˈfəʊliəʊ/."}
           </p>
-          <p className="italic text-sm"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
+          <p className="italic text-sm bdy"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
+
+          <hr className="bdy mt-5" />
 
           <br />
 
-          <p>
+          <p className="bdy">
             This data used to live on my main website, but I split it off to look “professional.”
             Whatever that means. Some folks call it focus, I call it compartmentalized genius.
           </p>
-          <p>
+          <p className="bdy">
             Anyway, go check out the real deal.
           </p>
 
@@ -68,7 +70,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowUpRight size={20} />}
-            className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+            className={clsx("py-6 mt-8 max-w-[200px] btn-dark", nunito.className)}
             radius={"lg"}
           >
             {"nsfw.arhm.dev"}
@@ -81,7 +83,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowDown size={20} />}
-            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-green-400 hover:text-green-600 hover:bg-green-100", nunito.className)}
+            className={clsx("py-6 mt-2 max-w-[200px] btn-dark", nunito.className)}
             radius={"lg"}
           >
             {"Get the resume"}
@@ -90,7 +92,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Work</p>
+          <p className="font-extrabold tracking-wide text-4xl hdn-dark">Work</p>
 
           <div className="flex flex-col gap-4 text-justify">
             {career.map((item) => (
@@ -98,14 +100,14 @@ export default function Home() {
                 key={`${item.orgName}-${item.startTime}`}
                 className="flex flex-col group"
               >
-                <p className="text-lg font-semibold">{item.title}</p>
+                <p className="text-lg font-semibold hdn-dark">{item.title}</p>
 
                 <div className="flex items-center gap-1">
                   <a
                     href={item.href as string}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-800 hover:text-blue-600 flex items-center gap-1"
+                    className="text-sm font-medium lnk-dark flex items-center gap-1"
                   >
                     <span>{item.orgName}</span>
                     <ExternalLink
@@ -120,7 +122,7 @@ export default function Home() {
                   {item.endTime ? ` – ${item.endTime}` : ""}
                 </p>
 
-                <p className="text-sm text-gray-700 mt-1">{item.body}</p>
+                <p className="text-sm text-gray-700 mt-1 tracking-wide">{item.body}</p>
               </div>
             ))}
           </div>
@@ -130,7 +132,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-3 rounded-4xl">
-          <p className="font-extrabold tracking-wide text-4xl">Projects</p>
+          <p className="font-extrabold tracking-wide text-4xl hdn-dark">Projects</p>
           <div className="flex flex-col gap-7 text-justify">
             {projects.map((item) => {
               const colors = getStatusColors(item.status);
@@ -138,32 +140,19 @@ export default function Home() {
               return (
                 <div key={item.title} className="flex flex-col">
 
-                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
+                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer lnk-dark">
                     <span className="truncate">{item.title}</span>
                     <ArrowUpRight size={20} className="flex-shrink-0" />
                   </a>
 
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm bdy text-gray-700 tracking-wide">
                     {item.projectDesc.join(" ")}
                   </p>
 
 
                   <div className="flex flex-row gap-1 mt-2">
-                    <p
-                      className={clsx(
-                        "text-xs px-3 py-1 border rounded-3xl font-medium",
-                        colors.bg,
-                        colors.text,
-                        colors.border,
-                        jbMono.className
-                      )}
-                    >
-                      {item.status.toUpperCase()}
-                    </p>
-
-                    <p>{"::"}</p>
-
-                    <div className="flex flex-row gap-2 p-1">
+                    
+                    <div className="flex flex-row gap-2 border-1 border-gray-500 px-3 py-2 rounded-2xl">
                       {item.images.map((img) => (
                         <img key={img} height={20} width={20} src={img} />
                       ))}
@@ -179,17 +168,17 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Education</p>
+          <p className="font-extrabold tracking-wide text-4xl hdn-dark">Education</p>
 
           <div className="flex flex-col gap-7 text-justify">
             {education.map((item) => (
 
               <div key={`${item.school}-${item.graduatedIn}`} className="flex flex-col">
-                <p className="text-lg font-semibold">{item.graduatedIn} @ {item.school}</p>
-                <p className="text-xs text-gray-500">
+                <p className="text-lg font-semibold hdn-dark">{item.graduatedIn} @ {item.school}</p>
+                <p className="text-xs bdy">
                   {item.location ? `${item.location}` : ""}
                 </p>
-                <p className="text-sm text-gray-700 mt-1">{item.body}</p>
+                <p className="text-sm sbt-dark mt-1">{item.body}</p>
               </div>
 
             ))}
@@ -199,7 +188,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Contact / Socials / Links</p>
+          <p className="font-extrabold tracking-wide text-4xl hdn-dark">Contact / Socials / Links</p>
 
           <br />
 
@@ -214,7 +203,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 startContent={<item.icon />}
-                className={clsx("py-5 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+                className={clsx("py-5 max-w-[200px] btn-dark", nunito.className)}
                 radius={"lg"}
               >
               </Button>

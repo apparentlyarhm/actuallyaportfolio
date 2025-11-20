@@ -29,7 +29,7 @@ export const projects: Project[] = [
     projectLink: "https://mccon.arhm.dev",
     images: [sprng.src, njs.src, gcp.src],
     category: "Personal",
-    status: "partially-live"
+    status: "live"
   },
   {
     title: "Spoti-proxy",

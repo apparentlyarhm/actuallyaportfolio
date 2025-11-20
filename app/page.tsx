@@ -41,7 +41,7 @@ export default function Home() {
     <section className="flex flex-col items-start sm:items-center justify-center gap-4 py-8 md:py-10">
       <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ", bitter.className)}>
 
-        <img src="/cat.png" height={50} width={91} className="rounded-3xl"></img>
+        <img src="/img.jpg" height={110} width={141} className="rounded-3xl"></img>
         <p className={clsx("text-xl")}>Arhum's Portfolio.</p>
 
         <div className="flex flex-col gap-2 rounded-3xl text-justify">
@@ -150,25 +150,24 @@ export default function Home() {
 
 
                   <div className="flex flex-row gap-1 mt-2">
+
+                    <div className="flex border-1 border-gray-300 rounded-xl flex-row gap-2 py-1 px-2">
+                      {item.images.map((img) => (
+                        <img key={img} height={20} width={20} src={img} />
+                      ))}
+                    </div>
                     <p
                       className={clsx(
-                        "text-xs px-3 py-1 border rounded-3xl font-medium",
+                        "inline-flex items-center justify-center leading-none text-xs px-3 py-1 border rounded-3xl font-medium",
                         colors.bg,
                         colors.text,
                         colors.border,
-                        jbMono.className
+                        jbMono.className  
                       )}
                     >
                       {item.status.toUpperCase()}
                     </p>
 
-                    <p>{"::"}</p>
-
-                    <div className="flex flex-row gap-2 p-1">
-                      {item.images.map((img) => (
-                        <img key={img} height={20} width={20} src={img} />
-                      ))}
-                    </div>
                   </div>
                 </div>
               )
@@ -200,7 +199,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Contact / Socials / Links</p>
+          <p className="font-extrabold tracking-wide text-4xl">Links</p>
 
           <br />
 

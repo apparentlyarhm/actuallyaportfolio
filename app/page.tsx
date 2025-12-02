@@ -98,7 +98,7 @@ export default function Home() {
           <Button
             variant="bordered"
             as={"a"}
-            href="#"
+            href="https://github.com/apparentlyarhm"
             target="_blank"
             rel="noopener noreferrer"
             endContent={<ArrowUpRight size={20} />}

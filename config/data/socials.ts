@@ -18,11 +18,6 @@ export const links: socialItem[] = [
         href: "https://discord.com/users/689729095923531873"
     },
     {
-        icon: GithubIcon,
-        title: "Github",
-        href: "https://github.com/apparentlyarhm"
-    },
-    {
         icon: InstagramIcon,
         title: "Instagram",
         href: "https://instagram.com/apparentlyarhm"

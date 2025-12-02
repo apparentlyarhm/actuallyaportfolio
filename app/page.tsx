@@ -52,6 +52,10 @@ export default function Home() {
           <p className="italic text-sm"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
           <hr className="text-gray-400 mt-5" />
 
+          <p>
+            As much as I hate portfolios, i had to create a simple one to be skimmable, which roughly follows my resume's strucutre.
+          </p>
+
           <br />
 
           <p>
@@ -59,25 +63,28 @@ export default function Home() {
             Whatever that means. Some folks call it focus, I call it compartmentalized genius.
           </p>
           <p>
-            Anyway, go check out the real deal.
+            Anyway, go check out the{" "}
+            <a
+              href="https://nsfw.arhm.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={clsx(
+                "text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center gap-1 border-1 rounded-xl border-gray-200 p-1 hover:border-gray-300",
+                nunito.className
+              )}
+            >
+              real deal
+              <ArrowUpRight size={16} />
+            </a>
           </p>
 
-          <Button
-            variant="bordered"
-            as={"a"}
-            href="https://nsfw.arhm.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            endContent={<ArrowUpRight size={20} />}
-            className={clsx("py-6 mt-8 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
-            radius={"lg"}
-          >
-            {"nsfw.arhm.dev"}
-          </Button>
+          <br />
+
+          <p className="font-extrabold tracking-wide text-4xl">Quick Links</p>
 
           <Button
             variant="bordered"
-            as={"a"}
+            as={"a"}  
             href="https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
@@ -86,6 +93,19 @@ export default function Home() {
             radius={"lg"}
           >
             {"Get the resume"}
+          </Button>
+
+          <Button
+            variant="bordered"
+            as={"a"}
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            endContent={<ArrowUpRight size={20} />}
+            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-gray-400 hover:text-gray-100 hover:bg-black", nunito.className)}
+            radius={"lg"}
+          >
+            {"Github"}
           </Button>
         </div>
         <br />
@@ -162,7 +182,7 @@ export default function Home() {
                         colors.bg,
                         colors.text,
                         colors.border,
-                        jbMono.className  
+                        jbMono.className
                       )}
                     >
                       {item.status.toUpperCase()}
@@ -199,7 +219,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Links</p>
+          <p className="font-extrabold tracking-wide text-4xl">Less Important links</p>
 
           <br />
 

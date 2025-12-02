@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     title: "Spoti-proxy",
     projectDesc: [
-      "An Go proxy for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev",
+      "An Go proxy for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev. I originally wrote it in Express but ported it to Go in order to get near instant cold starts. Also for some reason I added a self-hosted postgres database to this on my spare ubuntu laptop.",
     ],
     projectLink: "https://github.com/apparentlyarhm/app-proxy-go/",
     images: [go.src, ps.src, gcp.src],

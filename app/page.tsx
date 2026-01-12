@@ -2,16 +2,16 @@ import { projects } from "@/config/data/projects";
 import { career } from "@/config/data/work";
 import { bitter, jbMono, nunito } from "@/config/fonts";
 import clsx from "clsx";
-import { ArrowDown, ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { education } from "@/config/data/ed";
 import { Button } from "@heroui/button";
-import { links } from "@/config/data/socials";
+import { bigLinks, links } from "@/config/data/socials";
 
 const statusColors: Record<
   string,
   { bg: string; text: string; border: string }
 > = {
-  live: {
+  "live": {
     bg: "bg-green-50",
     text: "text-green-700",
     border: "border-green-200",
@@ -21,12 +21,12 @@ const statusColors: Record<
     text: "text-yellow-700",
     border: "border-yellow-200",
   },
-  unreleased: {
+  "unreleased": {
     bg: "bg-gray-100",
     text: "text-gray-700",
     border: "border-gray-200",
   },
-  deprecated: {
+  "deprecated": {
     bg: "bg-red-50",
     text: "text-red-700",
     border: "border-red-200",
@@ -82,43 +82,23 @@ export default function Home() {
 
           <p className="font-extrabold tracking-wide text-4xl">Quick Links</p>
 
-          <Button
-            variant="bordered"
-            as={"a"}  
-            href="https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            endContent={<ArrowDown size={20} />}
-            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-green-400 hover:text-green-600 hover:bg-green-100", nunito.className)}
-            radius={"lg"}
-          >
-            {"Get the resume"}
-          </Button>
-
-          <Button
-            variant="bordered"
-            as={"a"}
-            href="https://github.com/apparentlyarhm"
-            target="_blank"
-            rel="noopener noreferrer"
-            endContent={<ArrowUpRight size={20} />}
-            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-gray-400 hover:text-gray-100 hover:bg-black", nunito.className)}
-            radius={"lg"}
-          >
-            {"Github"}
-          </Button>
-          <Button
-            variant="bordered"
-            as={"a"}
-            href="https://blog.arhm.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            endContent={<ArrowUpRight size={20} />}
-            className={clsx("py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
-            radius={"lg"}
-          >
-            {"Blog"}
-          </Button>
+          {bigLinks.map((i) => {
+            return (
+              <Button
+                key={i.title}
+                variant="bordered"
+                as={"a"}
+                href={i.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                endContent={<i.icon size={20} />}
+                className={clsx(`py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 ${i.hoverStyle}`, nunito.className)}
+                radius={"lg"}
+              >
+                {i.title}
+              </Button>
+            )
+          })}
         </div>
         <br />
 

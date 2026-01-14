@@ -1,3 +1,20 @@
 @import "tailwindcss";
 
+body {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-family: var(--font-mono);
+}
+
+h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+}
+
+
 @config "../tailwind.config.js"

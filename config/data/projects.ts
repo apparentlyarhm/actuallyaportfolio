@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     title: "Admin Control Panel for Minecraft",
     projectDesc: [
-      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads and Log parsing. deployed via Cloud Run with CI/CD using PowerShell and Artifact Registry. Too early stage to have a Github actions pipeline though. Goal is to eliminate GCP console after setting up the server once (preferablly through IoC soon)"
+      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads and a custom log viewer"
       , "Ported to Go for faster spin up and build times and reduced image size."
     ],
     projectLink: "https://mccon.arhm.dev",
@@ -35,7 +35,9 @@ export const projects: Project[] = [
   {
     title: "Spoti-proxy",
     projectDesc: [
-      "An Go proxy for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev. I originally wrote it in Express but ported it to Go in order to get near instant cold starts. Also for some reason I added a self-hosted a postgres database to this on my spare ubuntu laptop.",
+      "An proxy application for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev."
+      ,"Ported to Go for faster spin up and build times and reduced image size."
+      ,"also features a self hosted postgres DB."
     ],
     projectLink: "https://github.com/apparentlyarhm/app-proxy-go/",
     images: [go.src, ps.src, gcp.src],
@@ -45,7 +47,7 @@ export const projects: Project[] = [
   {
     title: "Personal website",
     projectDesc: [
-      "Not a portfolio by the way, and expect more random stuff on this site. (nsfw.arhm.dev)"
+      "Not a portfolio by the way, and expect more random stuff on this site. (nsfw.arhm.dev)."
     ],
     projectLink: "https://github.com/apparentlyarhm/notaportfolio",
     images: [ts.src, njs.src],
@@ -55,7 +57,7 @@ export const projects: Project[] = [
   {
     title: "Infra Code for Minecraft Server- GCP",
     projectDesc: [
-      "Redoing all infra stuff for a minecraft server over and over is incredibly boring, so we automate everything from the infra itself to all the software setup and even mod loaders"
+      "Redoing all infra stuff for a minecraft server over and over is incredibly boring, so we automate everything from the infra itself to all the software setup and even mod loaders."
     ],
     projectLink: "https://github.com/apparentlyarhm/minecraft-terraform",
     images: [tf.src, linux.src, gcp.src],

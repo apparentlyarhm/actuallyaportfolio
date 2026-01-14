@@ -1,5 +1,5 @@
 import { DiscordIcon, GithubIcon, InstagramIcon, TwitterIcon, MailIcon, LinkedInIcon } from "@/components/icons";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Monitor, Pencil } from "lucide-react";
 
 export interface socialItem {
     icon: React.ElementType,
@@ -40,6 +40,16 @@ export const links: socialItem[] = [
         title: "LinkedIn",
         href: "https://www.linkedin.com/in/shaharhum/"
     },
+        {
+        icon: Pencil,
+        title: "Blog",
+        href: "https://blog.arhm.dev",
+    },
+    {
+        icon: Monitor,
+        title: "Real website",
+        href: "https://nsfw.arhm.dev",
+    },
 ]
 
 export const bigLinks: BigButtonLinks[] = [
@@ -55,10 +65,5 @@ export const bigLinks: BigButtonLinks[] = [
         href: "https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al/view?usp=drive_link",
         hoverStyle: "hover:border-green-400 hover:text-green-600 hover:bg-green-100",
     },
-    {
-        icon: ArrowUpRight,
-        title: "Blog",
-        href: "https://blog.arhm.dev",
-        hoverStyle: "hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100",
-    },
+
 ]

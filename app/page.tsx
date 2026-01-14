@@ -39,13 +39,13 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-start sm:items-center justify-center gap-4 py-8 md:py-10">
-      <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ", bitter.className)}>
+      <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ",)}>
 
         <img src="/img.jpg" height={110} width={141} className="rounded-3xl"></img>
-        <p className={clsx("text-xl")}>Arhum's Portfolio.</p>
+        <p className={clsx("text-xl font-serif")}>Arhum's Portfolio.</p>
 
         <div className="flex flex-col gap-2 rounded-3xl text-justify">
-          <p className="font-extrabold tracking-wide text-4xl">Philosophy</p>
+          <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// phil's osophy</h1>
           <p className="text-base text-gray-700">
             {"`Portfolio`- /pɔːtˈfəʊliəʊ/."}
           </p>
@@ -53,34 +53,14 @@ export default function Home() {
           <hr className="text-gray-400 mt-5" />
 
           <p>
-            As much as I hate portfolios, i had to create a simple one to be skimmable, which roughly follows my resume's strucutre.
+            uh yeah uh yeah uh yeah uh yeah wait a minute
+          </p>
+
+          <p>
+            i have a better website than this but i had to make a more apporachable version for hrs
           </p>
 
           <br />
-
-          <p>
-            This data used to live on my main website, but I split it off to look “professional.”
-            Whatever that means. Some folks call it focus, I call it compartmentalized genius.
-          </p>
-          <p>
-            Anyway, go check out the{" "}
-            <a
-              href="https://nsfw.arhm.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={clsx(
-                "text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center gap-1 border-1 rounded-xl border-gray-200 p-1 hover:border-gray-300",
-                nunito.className
-              )}
-            >
-              real deal
-              <ArrowUpRight size={16} />
-            </a>
-          </p>
-
-          <br />
-
-          <p className="font-extrabold tracking-wide text-4xl">Quick Links</p>
 
           {bigLinks.map((i) => {
             return (
@@ -103,7 +83,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Work</p>
+          <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// work</h1>
 
           <div className="flex flex-col gap-4 text-justify">
             {career.map((item) => (
@@ -143,7 +123,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-3 rounded-4xl">
-          <p className="font-extrabold tracking-wide text-4xl">Projects</p>
+          <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// selected projects</h1>
           <div className="flex flex-col gap-7 text-justify">
             {projects.map((item) => {
               const colors = getStatusColors(item.status);
@@ -156,10 +136,9 @@ export default function Home() {
                     <ArrowUpRight size={20} className="flex-shrink-0" />
                   </a>
 
-                  <p className="text-sm text-gray-700">
-                    {item.projectDesc.join(" ")}
-                  </p>
-
+                  {item.projectDesc.map((descLine, idx) =>
+                    <p key={idx+1} className="text-gray-600 text-sm">{descLine}</p>
+                  )}
 
                   <div className="flex flex-row gap-1 mt-2">
 
@@ -191,7 +170,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Education</p>
+          <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// education</h1>
 
           <div className="flex flex-col gap-7 text-justify">
             {education.map((item) => (
@@ -211,7 +190,7 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-2 rounded-3xl">
-          <p className="font-extrabold tracking-wide text-4xl">Less Important links</p>
+          <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// other links</h1>
 
           <br />
 

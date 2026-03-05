@@ -42,43 +42,44 @@ export default function Home() {
       <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ",)}>
 
         <img src="/img.jpg" height={110} width={141} className="rounded-3xl"></img>
-        <p className={clsx("text-xl font-serif")}>Arhum's Portfolio.</p>
+        <p className={clsx("text-xl font-serif")}>Shah M. Arhum - Software Engineer and a music Geek. Love video games.</p>
 
         <div className="flex flex-col gap-2 rounded-3xl text-justify">
           <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// phil's osophy</h1>
           <p className="text-base text-gray-700">
-            {"`Portfolio`- /pɔːtˈfəʊliəʊ/."}
+            {"Portfolio- /pɔːtˈfəʊliəʊ/."}
           </p>
           <p className="italic text-sm"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
           <hr className="text-gray-400 mt-5" />
 
-          <p>
-            uh yeah uh yeah uh yeah uh yeah wait a minute
-          </p>
-
-          <p>
-            i have a better website than this but i had to make a more apporachable version for hrs
-          </p>
+            <p>
+            I actually recommend checking out my personal space compared to this; But to each their own.. Also, I now have a {" "}
+            <a href="/resume" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+              dedicated page for my resume. check it out here.
+            </a>
+            </p>
 
           <br />
 
-          {bigLinks.map((i) => {
+            <div className="flex flex-row gap-3 overflow-x-auto">
+            {bigLinks.map((i) => {
             return (
               <Button
-                key={i.title}
-                variant="bordered"
-                as={"a"}
-                href={i.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                endContent={<i.icon size={20} />}
-                className={clsx(`py-6 mt-2 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 ${i.hoverStyle}`, nunito.className)}
-                radius={"lg"}
+              key={i.title}
+              variant="bordered"
+              as={"a"}
+              href={i.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={clsx(`py-6 px-5 mt-2 min-w-[200px] min-h-[120px] bg-gray-200 text-lg text-gray-800 font-black border-1 flex flex-col items-center justify-center gap-2 ${i.hoverStyle}`, nunito.className)}
+              radius={"lg"}
               >
-                {i.title}
+              <i.icon size={24} />
+              {i.title}
               </Button>
             )
-          })}
+            })}
+            </div>
         </div>
         <br />
 
@@ -194,23 +195,23 @@ export default function Home() {
 
           <br />
 
-          <div className="flex flex-row gap-2 text-justify">
+            <div className="flex flex-row gap-2 overflow-x-auto text-justify sm:justify-start justify-between">
             {links.map((item) => (
               <Button
-                isIconOnly
-                key={item.title}
-                variant="bordered"
-                as={"a"}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                startContent={<item.icon />}
-                className={clsx("py-5 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
-                radius={"lg"}
+              isIconOnly={false}
+              key={item.title}
+              variant="bordered"
+              as={"a"}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              startContent={<item.icon />}
+              className={clsx("py-5 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
+              radius={"lg"}
               >
               </Button>
             ))}
-          </div>
+            </div>
 
         </div>
 

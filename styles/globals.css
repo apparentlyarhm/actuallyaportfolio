@@ -16,5 +16,35 @@ code, pre, kbd {
   font-family: var(--font-mono);
 }
 
+.resume-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* padding- t r b l */
+  padding: 0px 0px 40px 0px;
+}
+
+.resume-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.resume-frame-wrapper {
+  width: 100%;
+  height: 100%;
+    overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.resume-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 @config "../tailwind.config.js"

@@ -1,5 +1,7 @@
 import { DiscordIcon, GithubIcon, InstagramIcon, TwitterIcon, MailIcon, LinkedInIcon } from "@/components/icons";
-import { ArrowDown, ArrowUpRight, Monitor, Pencil } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookAudio, BookHeartIcon, FileText, Monitor, Music, Pencil } from "lucide-react";
+
+export const GDRIVE_SLUG = "https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al"
 
 export interface socialItem {
     icon: React.ElementType,
@@ -40,30 +42,33 @@ export const links: socialItem[] = [
         title: "LinkedIn",
         href: "https://www.linkedin.com/in/shaharhum/"
     },
-        {
-        icon: Pencil,
-        title: "Blog",
-        href: "https://blog.arhm.dev",
-    },
-    {
-        icon: Monitor,
-        title: "Real website",
-        href: "https://nsfw.arhm.dev",
-    },
 ]
 
 export const bigLinks: BigButtonLinks[] = [
     {
-        icon: ArrowUpRight,
+        icon: GithubIcon,
         title: "Github",
         href: "https://github.com/apparentlyarhm",
         hoverStyle: "hover:border-gray-400 hover:text-gray-100 hover:bg-black",
     },
     {
-        icon: ArrowDown,
-        title: "Get the resume",
-        href: "https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al/view?usp=drive_link",
-        hoverStyle: "hover:border-green-400 hover:text-green-600 hover:bg-green-100",
+        icon: BookAudio,
+        title: "Blog",
+        href: "https://blog.arhm.dev",
+        hoverStyle: "hover:border-orange-400 hover:text-orange-600 hover:bg-orange-100",
+    },
+    {
+        icon: Music,
+        title: "Space",
+        href: "https://nsfw.arhm.dev",
+        hoverStyle: "hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100",
     },
 
 ]
+
+export const RESUME_ICON: BigButtonLinks ={
+    icon: ArrowDown,
+    title: "Resume",
+    href: `${GDRIVE_SLUG}/view?usp=drive_link`,
+    hoverStyle: "hover:border-green-400 hover:text-green-600 hover:bg-green-100",
+}

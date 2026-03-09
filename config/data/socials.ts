@@ -1,5 +1,5 @@
-import { DiscordIcon, GithubIcon, InstagramIcon, TwitterIcon, MailIcon, LinkedInIcon } from "@/components/icons";
-import { ArrowDown, ArrowUpRight, BookAudio, BookHeartIcon, FileText, Monitor, Music, Pencil } from "lucide-react";
+import { DiscordIcon, GithubIcon, InstagramIcon, MailIcon, LinkedInIcon, LTTIcon } from "@/components/icons";
+import { ArrowDown, BookAudio, Music } from "lucide-react";
 
 export const GDRIVE_SLUG = "https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al"
 
@@ -33,14 +33,14 @@ export const links: socialItem[] = [
         href: "https://instagram.com/apparentlyarhm"
     },
     {
-        icon: TwitterIcon,
-        title: "Tweeter",
-        href: "https://x.com/MohammedArhum"
-    },
-    {
         icon: LinkedInIcon,
         title: "LinkedIn",
         href: "https://www.linkedin.com/in/shaharhum/"
+    },
+    {
+        icon: LTTIcon,
+        title: "LTT Forums",
+        href: "https://linustechtips.com/profile/455909-apparentlyarhm/"
     },
 ]
 
@@ -60,7 +60,7 @@ export const bigLinks: BigButtonLinks[] = [
     {
         icon: Music,
         title: "Space",
-        href: "https://nsfw.arhm.dev",
+        href: "https://space.arhm.dev",
         hoverStyle: "hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100",
     },
 
@@ -70,5 +70,5 @@ export const RESUME_ICON: BigButtonLinks ={
     icon: ArrowDown,
     title: "Resume",
     href: `${GDRIVE_SLUG}/view?usp=drive_link`,
-    hoverStyle: "hover:border-green-400 hover:text-green-600 hover:bg-green-100",
+    hoverStyle: "hover:border-rose-400 hover:text-rose-600 hover:bg-rose-100",
 }

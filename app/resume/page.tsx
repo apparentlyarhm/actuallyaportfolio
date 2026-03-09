@@ -8,7 +8,7 @@ export default function Res() {
     return (
         <div className="resume-page">
             <div className="mx-auto max-w-full flex-grow resume-content">
-                <p className="font-semibold font-mono text-lg bg-orange-100 p-4 rounded-xl sm:text-3xl text-left">View or download my resume (or both)</p>
+                <p className="font-semibold font-mono text-lg bg-rose-500 text-slate-100 p-4 rounded-xl sm:text-3xl text-left">View or download my resume (or both)</p>
                 <div className="flex flex-row gap-4">
                     <Button
                         key={"Get"}
@@ -52,7 +52,7 @@ export default function Res() {
                         title="Resume Preview"
                     />
                 </div>
-                <p className="text-blue-500 font-mono text-xs text-left">HINT: Its best to just visit Google Drive directly on mobile. iframes are a pain in the ass.</p>
+                <p className="text-rose-500 font-mono text-xs text-left">HINT: Its best to just visit Google Drive directly on mobile. iframes are a pain</p>
             </div>
         </div>
     );

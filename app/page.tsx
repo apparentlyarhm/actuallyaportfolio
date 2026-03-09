@@ -52,34 +52,34 @@ export default function Home() {
           <p className="italic text-sm"> a set of pieces of creative work intended to demonstrate a person's ability to a potential employer. </p>
           <hr className="text-gray-400 mt-5" />
 
-            <p>
+          <p>
             I actually recommend checking out my personal space compared to this; But to each their own.. Also, I now have a {" "}
-            <a href="/resume" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+            <a href="/resume" className="text-rose-600 hover:text-rose-800 hover:underline font-medium">
               dedicated page for my resume. check it out here.
             </a>
-            </p>
+          </p>
 
           <br />
 
-            <div className="flex flex-row gap-3 overflow-x-auto">
+          <div className="flex flex-row gap-3 overflow-x-auto">
             {bigLinks.map((i) => {
-            return (
-              <Button
-              key={i.title}
-              variant="bordered"
-              as={"a"}
-              href={i.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={clsx(`py-6 px-5 mt-2 min-w-[200px] min-h-[120px] bg-gray-200 text-lg text-gray-800 font-black border-1 flex flex-col items-center justify-center gap-2 ${i.hoverStyle}`, nunito.className)}
-              radius={"lg"}
-              >
-              <i.icon size={24} />
-              {i.title}
-              </Button>
-            )
+              return (
+                <Button
+                  key={i.title}
+                  variant="bordered"
+                  as={"a"}
+                  href={i.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={clsx(`py-6 px-5 mt-2 min-w-[200px] min-h-[120px] bg-gray-200 text-lg text-gray-800 font-black border-1 flex flex-col items-center justify-center gap-2 ${i.hoverStyle}`, nunito.className)}
+                  radius={"lg"}
+                >
+                  <i.icon size={24} />
+                  {i.title}
+                </Button>
+              )
             })}
-            </div>
+          </div>
         </div>
         <br />
 
@@ -99,7 +99,7 @@ export default function Home() {
                     href={item.href as string}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-800 hover:text-blue-600 flex items-center gap-1"
+                    className="text-sm font-medium text-gray-800 hover:text-rose-600 flex items-center gap-1"
                   >
                     <span>{item.orgName}</span>
                     <ExternalLink
@@ -132,13 +132,13 @@ export default function Home() {
               return (
                 <div key={item.title} className="flex flex-col">
 
-                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-blue-600">
+                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-rose-600">
                     <span className="truncate">{item.title}</span>
                     <ArrowUpRight size={20} className="flex-shrink-0" />
                   </a>
 
                   {item.projectDesc.map((descLine, idx) =>
-                    <p key={idx+1} className="text-gray-600 text-sm">{descLine}</p>
+                    <p key={idx + 1} className="text-gray-600 text-sm">{descLine}</p>
                   )}
 
                   <div className="flex flex-row gap-1 mt-2">
@@ -195,23 +195,24 @@ export default function Home() {
 
           <br />
 
-            <div className="flex flex-row gap-2 overflow-x-auto text-justify sm:justify-start justify-between">
+          <div className="flex flex-row gap-2 overflow-x-auto text-justify sm:justify-start justify-between">
             {links.map((item) => (
               <Button
-              isIconOnly={false}
-              key={item.title}
-              variant="bordered"
-              as={"a"}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              startContent={<item.icon />}
-              className={clsx("py-5 max-w-[200px] bg-gray-200 text-medium text-gray-800 font-black border-1 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100", nunito.className)}
-              radius={"lg"}
+                isIconOnly={false}
+                key={item.title}
+                variant="bordered"
+                as={"a"}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                startContent={<item.icon />}
+                className={clsx("py-5 max-w-[200px] bg-gray-200 text-sm text-gray-800 border-1 hover:border-fuchsia-400 hover:text-fuchsia-600 hover:bg-fuchsia-100", nunito.className)}
+                radius={"lg"}
               >
+                {item.title}
               </Button>
             ))}
-            </div>
+          </div>
 
         </div>
 

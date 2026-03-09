@@ -158,6 +158,45 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
   );
 };
 
-
+export const LTTIcon: React.FC<IconSvgProps> = ({
+  size = 22,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      width={size || width}
+      viewBox="0 0 2223 2223"
+      version="1.1"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="1.41421"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="matrix(5.55556,0,0,5.55556,0,0)">
+        <g>
+          <path d="M200,0C310.383,0 400,89.617 400,200C400,310.383 310.383,400 200,400C89.617,400 0,310.383 0,200C0,89.617 89.617,0 200,0ZM200,20C299.345,20 380,100.655 380,200C380,299.345 299.345,380 200,380C100.655,380 20,299.345 20,200C20,100.655 100.655,20 200,20Z" fill="currentColor" />
+          <path d="M328.925,333.101L277.075,367.152L277.075,165L328.925,165L328.925,333.101Z" fill="currentColor" />
+          <g transform="matrix(1.20664,-0.404657,0.322782,0.9625,-72.6076,64.0664)">
+            <path d="M314,138L137,138L150.664,87L269.75,87L314,138Z" fill="currentColor" />
+          </g>
+          <g transform="matrix(1.32803e-16,2.16883,-0.237568,1.45469e-17,242.235,-901.172)">
+            <path d="M543,283L466,283L466,68.007L535.305,68.007L543,283Z" fill="currentColor" />
+          </g>
+          <g transform="matrix(1.02724,-0.343584,0.356391,1.06553,-90.1331,87.7163)">
+            <path d="M393,200L251,200L266.876,154L393,154L393,200Z" fill="currentColor" />
+          </g>
+          <g transform="matrix(0.980352,-0.340247,-0.339207,-0.977354,121.276,686.681)">
+            <path d="M266,346L103,346L103,296L248.611,296L266,346Z" fill="currentColor" />
+          </g>
+          <path d="M126.09,364.151L113.383,364.151L71,329.348L71,67.901L118.582,27.642L126.09,27.642L126.09,364.151Z" fill="currentColor" />
+        </g>
+      </g>
+    </svg>
+  );
+};
 
 

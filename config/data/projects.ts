@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: "Spoti-proxy",
     projectDesc: [
-      "An proxy application for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for nsfw.arhm.dev."
+      "An proxy application for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for space.arhm.dev."
       ,"Ported to Go for faster spin up and build times and reduced image size."
       ,"also features a self hosted postgres DB."
     ],
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   {
     title: "Personal website",
     projectDesc: [
-      "Not a portfolio by the way, and expect more random stuff on this site. (nsfw.arhm.dev)."
+      "Not a portfolio by the way, and expect more random stuff on this site. (space.arhm.dev)."
     ],
     projectLink: "https://github.com/apparentlyarhm/notaportfolio",
     images: [ts.src, njs.src],
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     title: "Monoblog",
     projectDesc: [
-      "Reinvented NextJS basically. All blog MDs are built into HTML by astro then served statically by Go. Hosted on Render."
+      "All blog MDs are built into HTML by astro then served statically by Go. Hosted on Render."
     ],
     projectLink: "https://github.com/apparentlyarhm/monoblog",
     images: [go.src, as.src],

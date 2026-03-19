@@ -22,34 +22,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Admin Control Panel for Minecraft",
+    title: "Bastion",
     projectDesc: [
-      "A Spring Boot and Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads and a custom log viewer"
-      , "Ported to Go for faster spin up and build times and reduced image size."
+      "A Go + Next.js based Minecraft server management platform stuff like IP whitelisting, Firewall configurations, Server mod downloads and a custom log viewer"
+      , "It was ported to Go for faster spin up and build times and reduced image size."
     ],
-    projectLink: "https://mccon.arhm.dev",
+    projectLink: "https://bastion.arhm.dev",
     images: [sprng.src, njs.src, gcp.src, go.src],
     category: "Personal",
     status: "live"
   },
   {
-    title: "Spoti-proxy",
+    title: "Muninn",
     projectDesc: [
-      "An proxy application for accessing Spotify, Steam and Github statistics with built-in token refresh and rate limiting, containerized and deployed on Cloud Run via GitHub Actions (originally written in Express). Main backend for space.arhm.dev."
-      ,"Ported to Go for faster spin up and build times and reduced image size."
-      ,"also features a self hosted postgres DB."
+      "“Muninn” is a Go-based API gateway with observability, adaptive failover, and secure request handling, deployed on Cloud Run for space.arhm.dev"
+      ,"has a Redis→MongoDB pipeline for scalable analytics with replay protection and rate limiting"
+      ,"Integrated Tailscale (tsnet) for secure hybrid (local + cloud) communication. I self host a postgresSQL database at home"
     ],
-    projectLink: "https://github.com/apparentlyarhm/app-proxy-go/",
+    projectLink: "https://muninn.arhm.dev",
     images: [go.src, ps.src, gcp.src],
     category: "Personal",
     status: "live"
   },
   {
-    title: "Personal website",
+    title: "Personal Space",
     projectDesc: [
       "Not a portfolio by the way, and expect more random stuff on this site. (space.arhm.dev)."
     ],
-    projectLink: "https://github.com/apparentlyarhm/notaportfolio",
+    projectLink: "https://space.arhm.dev",
     images: [ts.src, njs.src],
     category: "Personal",
     status: "live"
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     title: "Monoblog",
     projectDesc: [
-      "All blog MDs are built into HTML by astro then served statically by Go. Hosted on Render."
+      "My personal blog. All blog are MDs, built by astro then served statically by Go. Hosted on Render, and now features anonymous analytics powered by muninn; The link is the source code, the main blog link is up."
     ],
     projectLink: "https://github.com/apparentlyarhm/monoblog",
     images: [go.src, as.src],

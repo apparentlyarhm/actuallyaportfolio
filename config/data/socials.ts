@@ -33,9 +33,9 @@ export const links: socialItem[] = [
         href: "https://instagram.com/apparentlyarhm"
     },
     {
-        icon: LinkedInIcon,
-        title: "LinkedIn",
-        href: "https://www.linkedin.com/in/shaharhum/"
+        icon: Music,
+        title: "Space",
+        href: "https://space.arhm.dev"
     },
     {
         icon: LTTIcon,
@@ -58,9 +58,9 @@ export const bigLinks: BigButtonLinks[] = [
         hoverStyle: "hover:border-orange-400 hover:text-orange-600 hover:bg-orange-100",
     },
     {
-        icon: Music,
-        title: "Space",
-        href: "https://space.arhm.dev",
+        icon: LinkedInIcon,
+        title: "LinkedIn",
+        href: "https://www.linkedin.com/in/shaharhum/",
         hoverStyle: "hover:border-blue-400 hover:text-blue-600 hover:bg-blue-100",
     },
 

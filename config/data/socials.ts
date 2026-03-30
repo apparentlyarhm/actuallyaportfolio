@@ -1,5 +1,5 @@
 import { DiscordIcon, GithubIcon, InstagramIcon, MailIcon, LinkedInIcon, LTTIcon } from "@/components/icons";
-import { ArrowDown, BookAudio, Music } from "lucide-react";
+import { ArrowDown, BookAudio, Music, PcCase } from "lucide-react";
 
 export const GDRIVE_SLUG = "https://drive.google.com/file/d/1xnLWwF43JkZZShlxARfgrWAIWBli_0al"
 
@@ -41,6 +41,11 @@ export const links: socialItem[] = [
         icon: LTTIcon,
         title: "LTT Forums",
         href: "https://linustechtips.com/profile/455909-apparentlyarhm/"
+    },
+    {
+        icon: PcCase,
+        title: "Linux Probe",
+        href: "https://linux-hardware.org/?probe=11a5337a47"
     },
 ]
 

@@ -77,3 +77,17 @@ export const RESUME_ICON: BigButtonLinks ={
     href: `${GDRIVE_SLUG}/view?usp=drive_link`,
     hoverStyle: "hover:border-rose-400 hover:text-rose-600 hover:bg-rose-100",
 }
+
+export const SITE_DATA = {
+    site_title: "Arhum's Portfolio",
+    fname: "Shah Mohd Arhum",
+    site_url: "https://arhm.dev",
+    site_description:"Web resume and various other links I have to offer",
+    og: {
+        i: {
+            filename: "og.png",
+            fb: "arhm.dev"
+        },
+        t: "Arhum |  >> click if you are chill <<"
+    }
+}

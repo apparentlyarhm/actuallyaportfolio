@@ -4,19 +4,28 @@ import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 
 import { bitter, jbMono, nunito } from "@/config/fonts";
+import { SITE_DATA } from "@/config/data/socials";
 
 export const metadata: Metadata = {
-  title: "Arhum's Portfolio",
-  description: "online resume and various links I have to offer",
+  title: SITE_DATA.site_title,
+  description: SITE_DATA.site_description,
   keywords: ["Software Engineer"],
-  authors: [{ name: "Arhum", url: "https://arhm.dev" }],
+  authors: [{ name: SITE_DATA.fname, url: SITE_DATA.site_url }],
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://arhm.dev",
-    title: "Arhum | YET ANOTHER PORTFOLIO",
-    description: "online resume and various links I have to offer",
-    siteName: "Arhum's Portfolio",
+    locale: "en_IN",
+    url: SITE_DATA.site_url,
+    title: SITE_DATA.og.t,
+    description: SITE_DATA.site_description,
+    siteName: SITE_DATA.site_title,
+    images: [
+      {
+        url: `${SITE_DATA.site_url}/${SITE_DATA.og.i.filename}`,
+        width: 1200,
+        height: 630,
+        alt: SITE_DATA.og.i.fb,
+      },
+    ],
   },
   icons: {
     icon: "/favicon.ico",

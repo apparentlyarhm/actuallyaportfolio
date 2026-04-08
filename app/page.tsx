@@ -1,3 +1,5 @@
+"use client"
+
 import { projects } from "@/config/data/projects";
 import { career } from "@/config/data/work";
 import { bitter, jbMono, nunito } from "@/config/fonts";
@@ -6,6 +8,7 @@ import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { education } from "@/config/data/ed";
 import { Button } from "@heroui/button";
 import { bigLinks, links } from "@/config/data/socials";
+import { useState } from "react";
 
 const statusColors: Record<
   string,
@@ -132,14 +135,12 @@ export default function Home() {
               return (
                 <div key={item.t} className="flex flex-col">
 
-                  <a href={item.l ? item.l : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-rose-600">
+                  <a href={item.l ? item.l : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-xl font-semibold cursor-pointer hover:text-rose-600">
                     <span className="truncate">{item.t}</span>
                     <ArrowUpRight size={20} className="flex-shrink-0" />
                   </a>
 
-                  {item.des.map((descLine, idx) =>
-                    <p key={idx + 1} className="text-gray-600 text-sm">{descLine}</p>
-                  )}
+                  <ProjectDescription des={item.des} />
 
                   <div className="flex flex-row gap-1 mt-2">
 
@@ -220,3 +221,38 @@ export default function Home() {
     </section>
   );
 }
+
+const ProjectDescription = ({ des }: { des: string[] }) => {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = des.length > 1;
+  const displayedLines = expanded ? des : des.slice(0, 1);
+
+  return (
+    <div className="relative">
+      <div
+        className={clsx(
+          "text-gray-600 text-sm transition-all duration-300",
+          !expanded && "max-h-[3rem] overflow-hidden"
+        )}
+      >
+        {displayedLines.map((line, idx) => (
+          <p key={idx}>{line}</p>
+        ))}
+      </div>
+
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-1 inline-flex items-center gap-1 text-sm text-stone-500 hover:text-rose-600 hover:cursor-pointer italic"
+        >
+          <ArrowUpRight
+            size={14}
+            className={clsx("transition-transform", expanded && "rotate-180")}
+          />
+          {expanded ? "Collapse" : "Show more"}
+        </button>
+      )}
+    </div>
+  );
+};

@@ -127,24 +127,24 @@ export default function Home() {
           <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// selected projects</h1>
           <div className="flex flex-col gap-7 text-justify">
             {projects.map((item) => {
-              const colors = getStatusColors(item.status);
+              const colors = getStatusColors(item.s);
 
               return (
-                <div key={item.title} className="flex flex-col">
+                <div key={item.t} className="flex flex-col">
 
-                  <a href={item.projectLink ? item.projectLink : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-rose-600">
-                    <span className="truncate">{item.title}</span>
+                  <a href={item.l ? item.l : ""} id="po-trigger" className="inline-flex w-full min-w-0 items-center gap-1 text-lg font-semibold cursor-pointer hover:text-rose-600">
+                    <span className="truncate">{item.t}</span>
                     <ArrowUpRight size={20} className="flex-shrink-0" />
                   </a>
 
-                  {item.projectDesc.map((descLine, idx) =>
+                  {item.des.map((descLine, idx) =>
                     <p key={idx + 1} className="text-gray-600 text-sm">{descLine}</p>
                   )}
 
                   <div className="flex flex-row gap-1 mt-2">
 
                     <div className="flex border-1 border-gray-300 rounded-xl flex-row gap-2 py-1 px-2">
-                      {item.images.map((img) => (
+                      {item.i.map((img) => (
                         <img key={img} height={20} width={20} src={img} />
                       ))}
                     </div>
@@ -157,7 +157,7 @@ export default function Home() {
                         jbMono.className
                       )}
                     >
-                      {item.status.toUpperCase()}
+                      {item.s.toUpperCase()}
                     </p>
 
                   </div>

@@ -45,7 +45,7 @@ export default function Home() {
       <div className={clsx("flex flex-col max-w-full sm:max-w-4xl justify-center gap-6 ",)}>
 
         <img src="/img.jpg" height={110} width={141} className="rounded-3xl"></img>
-        <p className={clsx("text-xl font-serif")}>Shah M. Arhum - Software Engineer and a music Geek. Love video games.</p>
+        <p className={clsx("text-xl font-serif")}>Shah M. Arhum - Software Engineer, music nerd and a general geek. Love video games.</p>
 
         <div className="flex flex-col gap-2 rounded-3xl text-justify">
           <h1 className="font-extrabold tracking-wide text-2xl sm:text-4xl">// phil's osophy</h1>

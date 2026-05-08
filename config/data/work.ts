@@ -9,6 +9,14 @@ export interface careerItem {
 
 export const career: careerItem[] = [
     {
+        startTime: "April 2026",
+        endTime: "Present",
+        orgName: "Center for Developemnt of Advanced Computing (C-DAC)",
+        href: "https://cdac.in/index.aspx?id=home",
+        title: "Project Engineer - e-governance Division",
+        body: "Beurau of Indian Standards (BIS)",
+    },
+    {
         startTime: "July 2024",
         endTime: "June 2025",
         orgName: "Random Walk AI",
